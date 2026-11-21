@@ -81,7 +81,7 @@ const db=window.supabase?.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
 let user=null, employee='', articles=[], ranks=[];
 const RIGHTS_CATEGORIES=['Rettigheder','Sigtelse','Anholdelse','Tilbageholdelse'];
 function escapeEmailPart(value){return value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'.').replace(/^\.|\.$/g,'')}
-function authEmail(first,last){return `${escapeEmailPart(first)}.${escapeEmailPart(last)}@login.autoexotic.dk`}
+function authEmail(first,last){return `${escapeEmailPart(first)}.${escapeEmailPart(last)}@revrixrp.dk`}
 function showLogin(message=''){$('login-view').hidden=false;$('app').hidden=true;$('login-message').textContent=message}
 function element(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node}
 function showApp(){ $('login-view').hidden=true;$('app').hidden=false;$('user-name').textContent=employee||'Medarbejder';loadContent() }
